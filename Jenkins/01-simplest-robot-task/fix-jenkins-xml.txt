@@ -1,0 +1,10 @@
+1. 找到目标文件：Jenkins安装目录下的jenkins.xml
+
+2. 找到目标参数：service/arguments
+
+3. 增加如下参数：
+
+"-Dhudson.model.DirectoryBrowserSupport.CSP=\"sandbox allow-scripts allow-same-origin; default-src 'none'; img-src 'self' data: ; style-src 'self' 'unsafe-inline' data: ; script-src 'self' 'unsafe-inline' 'unsafe-eval' ;\" "
+
+注意最外层需要引号包围（因为参数中有空格），以及内层引号必须转义。
+
