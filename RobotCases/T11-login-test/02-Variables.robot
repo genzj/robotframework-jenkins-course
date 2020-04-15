@@ -8,7 +8,7 @@ ${expected error msg}    Your username is invalid!
 
 *** Test Cases ***
 abnormal login - invalid anything
-    [Setup]    sl.Open Browser    http://the-internet.herokuapp.com/login    browser=chrome
+    [Setup]    sl.Open Browser    http://121.41.27.81:8001/login    browser=chrome
     ${username}=    Set Variable    user123
     ${password}=    Set Variable    pass123
     ${expected error msg}=    Set Variable    Your username is invalid!
@@ -22,7 +22,7 @@ abnormal login - invalid anything
     [Teardown]    sl.Close All Browsers
 
 abnormal login - invalid variable
-    [Setup]    sl.Open Browser    http://the-internet.herokuapp.com/login    browser=chrome
+    [Setup]    sl.Open Browser    http://121.41.27.81:8001/login    browser=chrome
     sl.Input Text    name=username    ${username}
     sl.Input Password    name=password    ${password}
     sl.Click Button    tag=button

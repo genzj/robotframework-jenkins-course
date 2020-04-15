@@ -3,7 +3,7 @@ Library           SeleniumLibrary    WITH NAME    sl
 
 *** Test Cases ***
 normal login
-    [Setup]    sl.Open Browser    http://the-internet.herokuapp.com/login    browser=chrome
+    [Setup]    sl.Open Browser    http://121.41.27.81:8001/login    browser=chrome
     sl.Input Text    name=username    tomsmith
     sl.Input Password    name=password    SuperSecretPassword!
     sl.Click Button    tag=button
@@ -11,7 +11,7 @@ normal login
     [Teardown]    sl.Close All Browsers
 
 abnormal login - invalid password
-    [Setup]    sl.Open Browser    http://the-internet.herokuapp.com/login    browser=chrome
+    [Setup]    sl.Open Browser    http://121.41.27.81:8001/login    browser=chrome
     sl.Input Text    name=username    tomsmith
     sl.Input Password    name=password    user123
     sl.Click Button    tag=button
@@ -21,7 +21,7 @@ abnormal login - invalid password
     [Teardown]    sl.Close All Browsers
 
 abnormal login - invalid username
-    [Setup]    sl.Open Browser    http://the-internet.herokuapp.com/login    browser=chrome
+    [Setup]    sl.Open Browser    http://121.41.27.81:8001/login    browser=chrome
     sl.Input Text    name=username    user123
     sl.Input Password    name=password    user123
     sl.Click Button    tag=button

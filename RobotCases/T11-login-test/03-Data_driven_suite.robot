@@ -14,7 +14,7 @@ abnormal login - data
 *** Keywords ***
 Abnormal Login Test
     [Arguments]    ${username}    ${password}    ${expected error msg}
-    sl.Open Browser    http://the-internet.herokuapp.com/login    browser=chrome
+    sl.Open Browser    http://121.41.27.81:8001/login    browser=chrome
     sl.Input Text    name=username    ${username}
     sl.Input Password    name=password    ${password}
     sl.Click Button    tag=button
