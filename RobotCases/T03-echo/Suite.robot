@@ -14,7 +14,7 @@ Library           String    WITH NAME    str
     ${rc}    ${result}=    os.Run And Return Rc And Output    echo test string
     ${len} =    Evaluate    len($result)
     ${x}=    Evaluate    ord($result[-1])
-    Should Be Equal    ${rc}    ${0}
+    Should Be Equal    ${rc}    ${0}    # check windows %errorlevel%
     Should Be Equal    ${result}    test string \
     Should Be Equal    ${result}    test string${SPACE}
     Should Be Equal    ${result}    test string ${EMPTY}
